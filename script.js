@@ -82,4 +82,17 @@ console.log(hasEvenNumber); // true
 document.getElementById('some').innerHTML = `Массив содержит четное число: ${hasEvenNumber}`;
 
 
+// Массив чисел
+const numbers3 = [1, 2, 3, 4];
+
+// Используем every для проверки, все ли числа положительные
+const allPositive = numbers3.every(number => number > 0);
+
+// Выводим результат в консоль
+console.log(allPositive); // true
+
+// Добавляем результат на страницу
+document.getElementById('every').innerHTML = `Все числа положительные: ${allPositive}`;
+
+
 
