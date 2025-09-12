@@ -20,7 +20,7 @@ const longWords = words.filter(word => word.length > 5);
 console.log(longWords); // ['banana', 'grapefruit']
 
 // Добавляем результат на страницу
-document.getElementById('filteredOutput').innerHTML = `Long Words: ${longWords.join(', ')}`;
+document.getElementById('filter').innerHTML = `Long Words: ${longWords.join(', ')}`;
 
 
 
@@ -28,13 +28,13 @@ document.getElementById('filteredOutput').innerHTML = `Long Words: ${longWords.j
 const numbers1 = [1, 2, 3, 4];
 
 // Используем reduce для нахождения суммы всех чисел
-const sum = numbers.reduce((acc, current) => acc + current, 0);
+const sum = numbers1.reduce((acc, current) => acc + current, 0);
 
 
 console.log(sum); // 10
 
 // Добавляем результат на страницу
-document.getElementById('reduceOutput').innerHTML = `Sum: ${sum}`;
+document.getElementById('reduce').innerHTML = `Sum: ${sum}`;
 
 
 
@@ -48,5 +48,38 @@ students.forEach(student => {
 
 // Добавляем результат на страницу
 document.getElementById('forEach').innerHTML = `Students: ${students.map(s => s.name).join(', ')}`;
+
+
+
+// Массив книг
+const books = [
+  {title: '1984', author: 'George Orwell'},
+  {title: 'To Kill a Mockingbird', author: 'Harper Lee'}
+];
+
+// Используем find для поиска книги по названию
+const book = books.find(b => b.title === '1984');
+
+
+console.log(book);
+
+// Добавляем результат на страницу
+document.getElementById('findOutput').innerHTML = `Found Book: ${book.title} by ${book.author}`;
+
+
+
+
+// Массив чисел
+const numbers2 = [1, 2, 3, 4];
+
+// Используем some для проверки, содержит ли массив хотя бы одно четное число
+const hasEvenNumber = numbers2.some(number => number % 2 === 0);
+
+// Выводим результат в консоль
+console.log(hasEvenNumber); // true
+
+// Добавляем результат на страницу
+document.getElementById('some').innerHTML = `Массив содержит четное число: ${hasEvenNumber}`;
+
 
 
