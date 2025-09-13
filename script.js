@@ -96,3 +96,28 @@ document.getElementById('every').innerHTML = `Все числа положите
 
 
 
+// Массив данных о продажах
+const sales = [
+  {date: '2023-10-01', item: 'apple', amount: 100},
+  {date: '2023-10-02', item: 'banana', amount: 150},
+  {date: '2023-10-01', item: 'apple', amount: 200},
+];
+
+// Используем reduce для вычисления общей суммы продаж по каждому товару
+const salesByItem = sales.reduce((acc, sale) => {
+  if (!acc[sale.item]) {
+    acc[sale.item] = 0;
+  }
+  acc[sale.item] += sale.amount;
+  return acc;
+}, {});
+
+// Выводим результат в консоль
+console.log(salesByItem); // {apple: 300, banana: 150}
+
+// Добавляем результат на страницу
+document.getElementById('sales').innerHTML = `Сводка продаж: ${JSON.stringify(salesByItem)}`;
+
+
+
+
