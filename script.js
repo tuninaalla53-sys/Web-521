@@ -120,4 +120,42 @@ document.getElementById('sales').innerHTML = `Сводка продаж: ${JSON.
 
 
 
+// Массив данных о пользователях
+const users = [
+  {name: 'Alice', age: 28, isSubscribed: true},
+  {name: 'Bob', age: 35, isSubscribed: false},
+  {name: 'Charlie', age: 40, isSubscribed: true},
+];
+
+// Используем filter для фильтрации пользователей с активной подпиской и возрастом старше 30 лет
+const filteredUsers = users.filter(user => user.isSubscribed && user.age > 30);
+
+// Выводим результат в консоль
+console.log(filteredUsers);
+
+// Добавляем результат на страницу
+document.getElementById('filterUsers').innerHTML = `Отфильтрованные пользователи: ${JSON.stringify(filteredUsers)}`;
+
+
+
+// Массив задач
+const tasks = [
+  {task: 'Write report', status: 'completed', priority: 'high'},
+  {task: 'Send email', status: 'pending', priority: 'low'},
+  {task: 'Fix bug', status: 'pending', priority: 'high'}
+];
+
+// Используем forEach для вывода задач с высоким приоритетом и статусом "pending"
+tasks.forEach(task => {
+  if (task.priority === 'high' && task.status === 'pending') {
+    console.log(task.task); // Выводит "Fix bug"
+  }
+});
+
+// Добавляем результат на страницу
+document.getElementById('tasks').innerHTML = `Отложенные задачи с высоким приоритетом: ${tasks.filter(task => task.priority === 'high' && task.status === 'pending').map(task => task.task).join(', ')}`;
+
+
+
+
 
