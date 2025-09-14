@@ -21,3 +21,18 @@ console.log(longWords); // ['banana', 'grapefruit']
 
 // Добавляем результат на страницу
 document.getElementById('filteredOutput').innerHTML = `Long Words: ${longWords.join(', ')}`;
+
+
+
+
+const numbers1 = [1, 2, 3, 4];
+
+// Используем reduce для нахождения суммы всех чисел
+const sum = numbers.reduce((acc, current) => acc + current, 0);
+
+
+console.log(sum); // 10
+
+// Добавляем результат на страницу
+document.getElementById('reduceOutput').innerHTML = `Sum: ${sum}`;
+
