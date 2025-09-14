@@ -7,3 +7,17 @@ console.log(doubledNumbers); // [2, 4, 6, 8]
 
 // Добавляем результат на страницу
 document.getElementById('output').innerHTML = `Doubled Numbers: ${doubledNumbers.join(', ')}`;
+
+
+
+
+const words = ['apple', 'banana', 'kiwi', 'grapefruit'];
+
+// Используем filter для фильтрации слов, длина которых больше 5 символов
+const longWords = words.filter(word => word.length > 5);
+
+
+console.log(longWords); // ['banana', 'grapefruit']
+
+// Добавляем результат на страницу
+document.getElementById('filteredOutput').innerHTML = `Long Words: ${longWords.join(', ')}`;
