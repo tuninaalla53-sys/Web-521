@@ -36,3 +36,17 @@ console.log(sum); // 10
 // Добавляем результат на страницу
 document.getElementById('reduceOutput').innerHTML = `Sum: ${sum}`;
 
+
+
+// Массив студентов
+const students = [{name: 'Alice', age: 21}, {name: 'Bob', age: 22}];
+
+// Используем forEach для вывода имен студентов
+students.forEach(student => {
+  console.log(student.name);
+});
+
+// Добавляем результат на страницу
+document.getElementById('forEach').innerHTML = `Students: ${students.map(s => s.name).join(', ')}`;
+
+
