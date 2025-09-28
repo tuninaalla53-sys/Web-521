@@ -17,7 +17,7 @@ class Category {
 
     // Метод для получения списка продуктов категории
     public function getCategoryProducts() {
-        return $this->_list_products;  // Возвращаем массив продуктов категории
+        return $this->_list_products;  
     }
 
     // Метод для добавления продукта в категорию
